@@ -20,7 +20,7 @@ public class Seguridad {
                 JOptionPane.showMessageDialog(null, res, "Inicio de sesión", JOptionPane.INFORMATION_MESSAGE);
                 intentos = 0;
                 login.setIntentos(intentos);
-                break;
+                break; 
             }
             /*if((estudiante[i].equalsIgnoreCase(user) && estudiante[i+1].equals(pwd)))
             {
