@@ -5,32 +5,31 @@ import javax.swing.JOptionPane;
 public class Seguridad {
     
     frmLogin login = new frmLogin();
-    String res;
+    String res, rol;
     
-    public void validarUsuario(String estudiante[],String profesor[], String user, String pwd, int intentos)
+    public void validarUsuario(String usuarios[], String user, String pwd, int intentos)
     {
         boolean encontrado = false;
         
-        for (int i = 0; i<profesor.length; i++)
+        for (int i = 0; i<usuarios.length; i++)
         {
-            if((profesor[i].equalsIgnoreCase(user) && profesor[i+1].equals(pwd)))
+            if((usuarios[i].equalsIgnoreCase(user) && usuarios[i+1].equals(pwd)))
             {
-                res = "Bienvenido profesor " + user;
+                rol = usuarios[i+2];
                 encontrado = true;
+                
+                if("estudiante".equals(rol))
+                {
+                    res = "Bienvenido estudiante " + user;
+                }else
+                {
+                    res = "Bienvenido profesor " + user;
+                }
                 JOptionPane.showMessageDialog(null, res, "Inicio de sesión", JOptionPane.INFORMATION_MESSAGE);
                 intentos = 0;
                 login.setIntentos(intentos);
                 break; 
             }
-            /*if((estudiante[i].equalsIgnoreCase(user) && estudiante[i+1].equals(pwd)))
-            {
-                res = "Bienvenido estudiante" + user;
-                encontrado = true;
-                JOptionPane.showMessageDialog(null, res, "Inicio de sesión", JOptionPane.INFORMATION_MESSAGE);
-                intentos = 0;
-                login.setIntentos(intentos);
-                break;
-            }*/
         }
         
         if(encontrado == false)//Estado de la cuenta

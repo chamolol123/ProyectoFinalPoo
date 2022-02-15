@@ -66,7 +66,7 @@ public class frmLogin extends javax.swing.JFrame {
         });
 
         btnEntrar.setBackground(new java.awt.Color(255, 153, 51));
-        btnEntrar.setText("INICIAR/LOG IN");
+        btnEntrar.setText("INICIAR");
         btnEntrar.setToolTipText("Iniciar sesión");
         btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -80,7 +80,7 @@ public class frmLogin extends javax.swing.JFrame {
         });
 
         btnSalir.setBackground(new java.awt.Color(255, 153, 51));
-        btnSalir.setText("SALIR/CLOSE");
+        btnSalir.setText("SALIR");
         btnSalir.setToolTipText("cerrar aplicación");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,29 +200,28 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         try {
-            int nProfesores=0, i=0;
-            String [] profesor = null;
-            String [] estudiante = null;
+            int nlineas=0, i=0;
+            String [] usuarios = null;
             String linea;
-            sc = new Scanner(new File("profesores.txt"));
-            File archivo = new File("profesores.txt");
+            sc = new Scanner(new File("usuarios.txt"));
+            File archivo = new File("usuarios.txt");
             FileReader fr = new FileReader(archivo);
             BufferedReader br = new BufferedReader(fr);
             
             try {
                 while((linea = br.readLine())!=null)
                 {
-                    nProfesores++;            
+                    nlineas++;            
                 }
             } catch (IOException ex) {
                 Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            profesor = new String[nProfesores]; //Tamaño del arreglo
+            usuarios = new String[nlineas]; //Tamaño del arreglo
             
             while(sc.hasNextLine())
             {
-                profesor[i++] = sc.nextLine(); //Almacenando cada linea en una posicion del arreglo
+                usuarios[i++] = sc.nextLine(); //Almacenando cada linea en una posicion del arreglo
             }
             
             intentos++;
@@ -232,7 +231,7 @@ public class frmLogin extends javax.swing.JFrame {
             
             Seguridad s = new Seguridad();
             
-            s.validarUsuario(estudiante,profesor, user, pwd, intentos);
+            s.validarUsuario(usuarios, user, pwd, intentos);
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
