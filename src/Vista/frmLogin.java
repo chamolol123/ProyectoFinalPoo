@@ -52,7 +52,7 @@ public class frmLogin extends javax.swing.JFrame {
         lblContraseña.setBackground(new java.awt.Color(255, 255, 255));
         lblContraseña.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblContraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblContraseña.setText("CONTRASEÑA/PASSWORD");
+        lblContraseña.setText("CONTRASENA/PASSWORD");
 
         txtUsuario.setToolTipText("Ingrese su nombre de usuario");
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
