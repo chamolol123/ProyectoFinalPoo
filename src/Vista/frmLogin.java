@@ -66,7 +66,11 @@ public class frmLogin extends javax.swing.JFrame {
         });
 
         btnEntrar.setBackground(new java.awt.Color(255, 153, 51));
+<<<<<<< Updated upstream
         btnEntrar.setText("INICIAR");
+=======
+        btnEntrar.setText("INICIAR / LOG IN");
+>>>>>>> Stashed changes
         btnEntrar.setToolTipText("Iniciar sesión");
         btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -80,7 +84,11 @@ public class frmLogin extends javax.swing.JFrame {
         });
 
         btnSalir.setBackground(new java.awt.Color(255, 153, 51));
+<<<<<<< Updated upstream
         btnSalir.setText("SALIR");
+=======
+        btnSalir.setText("SALIR / CLOSE");
+>>>>>>> Stashed changes
         btnSalir.setToolTipText("cerrar aplicación");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

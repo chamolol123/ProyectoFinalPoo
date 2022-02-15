@@ -124,7 +124,11 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
             </Property>
+<<<<<<< Updated upstream
             <Property name="text" type="java.lang.String" value="INICIAR"/>
+=======
+            <Property name="text" type="java.lang.String" value="INICIAR / LOG IN"/>
+>>>>>>> Stashed changes
             <Property name="toolTipText" type="java.lang.String" value="Iniciar sesi&#xf3;n"/>
           </Properties>
           <Events>
@@ -137,7 +141,11 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
             </Property>
+<<<<<<< Updated upstream
             <Property name="text" type="java.lang.String" value="SALIR"/>
+=======
+            <Property name="text" type="java.lang.String" value="SALIR / CLOSE"/>
+>>>>>>> Stashed changes
             <Property name="toolTipText" type="java.lang.String" value="cerrar aplicaci&#xf3;n"/>
           </Properties>
           <Events>
