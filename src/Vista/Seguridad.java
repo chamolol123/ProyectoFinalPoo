@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Seguridad {
     
-    frmLogin login = new frmLogin();
+    JFrameLogin login = new JFrameLogin();
     String res, persona;
     
     public void validarUsuario(String usuarios[], String user, String pwd, int intentos)
