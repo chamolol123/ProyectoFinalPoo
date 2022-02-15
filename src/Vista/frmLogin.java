@@ -149,28 +149,29 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         try {
-            int nLineas=0, i=0;
-            String [] usuarios = null;
+            int nProfesores=0, i=0;
+            String [] profesor = null;
+            String [] estudiante = null;
             String linea;
-            sc = new Scanner(new File("usuarios.txt"));
-            File archivo = new File("usuarios.txt");
+            sc = new Scanner(new File("profesores.txt"));
+            File archivo = new File("profesores.txt");
             FileReader fr = new FileReader(archivo);
             BufferedReader br = new BufferedReader(fr);
             
             try {
                 while((linea = br.readLine())!=null)
                 {
-                    nLineas++;            
+                    nProfesores++;            
                 }
             } catch (IOException ex) {
                 Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            usuarios = new String[nLineas]; //Tamaño del arreglo
+            profesor = new String[nProfesores]; //Tamaño del arreglo
             
             while(sc.hasNextLine())
             {
-                usuarios[i++] = sc.nextLine(); //Almacenando cada linea en una posicion del arreglo
+                profesor[i++] = sc.nextLine(); //Almacenando cada linea en una posicion del arreglo
             }
             
             intentos++;
@@ -180,7 +181,7 @@ public class frmLogin extends javax.swing.JFrame {
             
             Seguridad s = new Seguridad();
             
-            s.validarUsuario(usuarios, user, pwd, intentos);
+            s.validarUsuario(estudiante,profesor, user, pwd, intentos);
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(frmLogin.class.getName()).log(Level.SEVERE, null, ex);
