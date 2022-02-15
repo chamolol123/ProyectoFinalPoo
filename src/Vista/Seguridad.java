@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Seguridad {
     
     frmLogin login = new frmLogin();
-    String res, rol;
+    String res, persona;
     
     public void validarUsuario(String usuarios[], String user, String pwd, int intentos)
     {
@@ -15,10 +15,10 @@ public class Seguridad {
         {
             if((usuarios[i].equalsIgnoreCase(user) && usuarios[i+1].equals(pwd)))
             {
-                rol = usuarios[i+2];
+                persona = usuarios[i+2];
                 encontrado = true;
                 
-                if("estudiante".equals(rol))
+                if("estudiante".equals(persona))
                 {
                     res = "Bienvenido estudiante " + user;
                 }else
