@@ -210,7 +210,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
          try {
             int nlineas=0, i=0;
-            String [] usuarios = null;
+            String [] usuarios;
             String linea;
             sc = new Scanner(new File("usuarios.txt"));
             File archivo = new File("usuarios.txt");
