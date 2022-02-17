@@ -8,12 +8,12 @@ package Vista;
  *
  * @author NUBIA PARRA
  */
-public class frmEstudiante extends javax.swing.JFrame {
+public class JFrmEstudiante extends javax.swing.JFrame {
 
     /**
      * Creates new form frmEstudiante
      */
-    public frmEstudiante() {
+    public JFrmEstudiante() {
         initComponents();
         
         setLocationRelativeTo(null);

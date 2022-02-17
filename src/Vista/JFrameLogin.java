@@ -253,7 +253,7 @@ public class JFrameLogin extends javax.swing.JFrame {
              this.setVisible(false);
              
          }else{
-             frmEstudiante estudiante = new frmEstudiante();
+             JFrmEstudiante estudiante = new JFrmEstudiante();
              estudiante.setVisible(true);
              this.setVisible(false);
          }
