@@ -22,6 +22,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     private static Scanner sc;
     private static int intentos;
     private static String user, pwd;
+    private static boolean verificarFrame;
     
     public JFrameLogin() {
         initComponents();
@@ -32,6 +33,11 @@ public class JFrameLogin extends javax.swing.JFrame {
     
     public static void setIntentos(int intentos) {
         JFrameLogin.intentos = intentos;
+    }
+    
+    public static void setVerificarFrame(boolean verificarFrame)
+    {
+        JFrameLogin.verificarFrame = verificarFrame;
     }
 
 
@@ -48,10 +54,10 @@ public class JFrameLogin extends javax.swing.JFrame {
         lblInicioSes = new javax.swing.JLabel();
         lblPwd = new javax.swing.JLabel();
         lblUser = new javax.swing.JLabel();
-        txtPwd = new javax.swing.JTextField();
         txtUser = new javax.swing.JTextField();
         btnSalir = new javax.swing.JButton();
         btnEntrar = new javax.swing.JButton();
+        txtPwd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,13 +124,6 @@ public class JFrameLogin extends javax.swing.JFrame {
         lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/user.png"))); // NOI18N
         lblUser.setText("USUARIO");
 
-        txtPwd.setToolTipText("Ingrese su contraseña");
-        txtPwd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPwdActionPerformed(evt);
-            }
-        });
-
         txtUser.setToolTipText("Ingrese su nombre de usuario");
         txtUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,9 +159,9 @@ public class JFrameLogin extends javax.swing.JFrame {
                     .addComponent(lblPwd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtUser)
-                    .addComponent(txtPwd)
                     .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtPwd))
                 .addContainerGap(130, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -199,10 +198,6 @@ public class JFrameLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPwdActionPerformed
 
     private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserActionPerformed
         // TODO add your handling code here:
@@ -245,11 +240,24 @@ public class JFrameLogin extends javax.swing.JFrame {
             
             Seguridad s = new Seguridad();
             
-            s.validarUsuario(usuarios, user, pwd, intentos);
+            s.validarUsuario(usuarios, user, pwd, intentos, verificarFrame);
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(JFrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+         if(verificarFrame==true)
+         {
+             JFrameProfesor profesor = new JFrameProfesor();
+             profesor.setVisible(true);
+             this.setVisible(false);
+             
+         }else{
+             frmEstudiante estudiante = new frmEstudiante();
+             estudiante.setVisible(true);
+             this.setVisible(false);
+         }
+         
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
@@ -300,7 +308,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblSistemas;
     private javax.swing.JLabel lblUniIcon;
     private javax.swing.JLabel lblUser;
-    private javax.swing.JTextField txtPwd;
+    private javax.swing.JPasswordField txtPwd;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }

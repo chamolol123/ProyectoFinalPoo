@@ -15,6 +15,8 @@ public class frmEstudiante extends javax.swing.JFrame {
      */
     public frmEstudiante() {
         initComponents();
+        
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

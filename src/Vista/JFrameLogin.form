@@ -51,9 +51,9 @@
                       <Component id="lblPwd" max="32767" attributes="0"/>
                       <Component id="lblUser" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtUser" max="32767" attributes="0"/>
-                      <Component id="txtPwd" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnSalir" max="32767" attributes="0"/>
                       <Component id="btnEntrar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtPwd" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="130" max="32767" attributes="0"/>
               </Group>
@@ -197,14 +197,6 @@
             <Property name="text" type="java.lang.String" value="USUARIO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtPwd">
-          <Properties>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese su contrase&#xf1;a"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPwdActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JTextField" name="txtUser">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value="Ingrese su nombre de usuario"/>
@@ -234,6 +226,8 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEntrarActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtPwd">
         </Component>
       </SubComponents>
     </Container>
