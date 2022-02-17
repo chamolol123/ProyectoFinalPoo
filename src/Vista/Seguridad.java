@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 public class Seguridad {
     
     JFrameLogin login = new JFrameLogin();
-    String res, persona;
+    String persona;
     
-    public void validarUsuario(String usuarios[], String user, String pwd, int intentos)
+    public void validarUsuario(String usuarios[], String user, String pwd, int intentos, boolean verificarFrame)
     {
         boolean encontrado = false;
         
@@ -20,12 +20,18 @@ public class Seguridad {
                 
                 if("estudiante".equals(persona))
                 {
-                    res = "Bienvenido estudiante " + user;
+                    
+                    verificarFrame = false;
+                    login.setVerificarFrame(verificarFrame);
+                     
                 }else
                 {
-                    res = "Bienvenido profesor " + user;
+                    
+                    verificarFrame = true;
+                    login.setVerificarFrame(verificarFrame);
+                    
                 }
-                JOptionPane.showMessageDialog(null, res, "Inicio de sesión", JOptionPane.INFORMATION_MESSAGE);
+                
                 intentos = 0;
                 login.setIntentos(intentos);
                 break; 
@@ -34,8 +40,7 @@ public class Seguridad {
         
         if(encontrado == false)//Estado de la cuenta
         {
-            res = "Clave o usuario erronéo. Tienes " + intentos + " intentos fallidos.";
-            JOptionPane.showMessageDialog(null, res, "Inicio de sesión", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Clave o usuario erronéo. Tienes " + intentos + " intentos fallidos.", "Inicio de sesión", JOptionPane.ERROR_MESSAGE);
         }
         if(intentos > 2)
         {
