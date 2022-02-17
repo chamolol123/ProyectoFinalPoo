@@ -34,6 +34,7 @@ public class Seguridad {
                 
                 intentos = 0;
                 login.setIntentos(intentos);
+                login.setEncontrado(encontrado);
                 break; 
             }
         }

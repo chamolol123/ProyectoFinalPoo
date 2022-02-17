@@ -22,13 +22,17 @@ public class JFrameLogin extends javax.swing.JFrame {
     private static Scanner sc;
     private static int intentos;
     private static String user, pwd;
-    private static boolean verificarFrame;
+    private static boolean verificarFrame, encontrado;
     
     public JFrameLogin() {
         initComponents();
         
         setLocationRelativeTo(null);//Centrar en la pantalla el formulario
         rootPane.setDefaultButton(btnEntrar);
+    }
+    
+    public static void setEncontrado(int intentos) {
+        JFrameLogin.intentos = intentos;
     }
     
     public static void setIntentos(int intentos) {
@@ -38,6 +42,10 @@ public class JFrameLogin extends javax.swing.JFrame {
     public static void setVerificarFrame(boolean verificarFrame)
     {
         JFrameLogin.verificarFrame = verificarFrame;
+    }
+        public static void setEncontrado(boolean encontrado)
+    {
+        JFrameLogin.encontrado = encontrado;
     }
 
 
@@ -246,7 +254,9 @@ public class JFrameLogin extends javax.swing.JFrame {
             Logger.getLogger(JFrameLogin.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-         if(verificarFrame==true)
+         if(encontrado == true)
+         {
+         if(verificarFrame == true)
          {
              JFrameProfesor profesor = new JFrameProfesor();
              profesor.setVisible(true);
@@ -256,6 +266,7 @@ public class JFrameLogin extends javax.swing.JFrame {
              JFrameEstudiante estudiante = new JFrameEstudiante();
              estudiante.setVisible(true);
              this.setVisible(false);
+         }
          }
          
     }//GEN-LAST:event_btnEntrarActionPerformed
