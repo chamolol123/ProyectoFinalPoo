@@ -18,7 +18,7 @@ public class Seguridad {
                 persona = usuarios[i+2];
                 encontrado = true;
                 
-                if("estudiante".equals(persona))
+                if("Estudiante".equals(persona))
                 {
                     
                     verificarFrame = false;

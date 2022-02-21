@@ -1,15 +1,12 @@
 Felipe Cabello
 1234
-estudiante
+Estudiante
 Monkey D
 1234
-profesor
+Profesor
 Saturno Casio
 1234
-estudiante
+Estudiante
 Esteban Pera
 1234
-estudiante
-Camilo O
-1234
-estudiante
+Estudiante
