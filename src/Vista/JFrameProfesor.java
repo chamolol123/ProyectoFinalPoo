@@ -170,7 +170,8 @@ public class JFrameProfesor extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAgregarEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEstActionPerformed
-        // TODO add your handling code here:
+        JFrameAgreEstudiante agregar = new JFrameAgreEstudiante();
+        agregar.setVisible(true);
     }//GEN-LAST:event_btnAgregarEstActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
