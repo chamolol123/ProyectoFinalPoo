@@ -10,3 +10,6 @@ Estudiante
 Esteban Pera
 1234
 Estudiante
+Camilo O
+1234
+Estudiante
