@@ -1,5 +1,6 @@
-package Vista;
+package Modelo;
 
+import Vista.JFrameLogin;
 import javax.swing.JOptionPane;
 
 public class Seguridad {

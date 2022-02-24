@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import Modelo.ControllerLogin;
+import Modelo.Seguridad;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,7 +34,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     }
     
     public static void setEncontrado(int intentos) {
-        JFrameLogin.intentos = intentos;
+        JFrameLogin.setIntentos(intentos);
     }
     
     public static void setIntentos(int intentos) {
@@ -216,7 +218,11 @@ public class JFrameLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-         try {
+         
+        ControllerLogin validar = new ControllerLogin();
+        
+        
+        try {
             int nlineas=0, i=0;
             String [] usuarios;
             String linea;
@@ -322,4 +328,200 @@ public class JFrameLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtPwd;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the verificarFrame
+     */
+    public static boolean isVerificarFrame() {
+        return verificarFrame;
+    }
+
+    /**
+     * @return the encontrado
+     */
+    public static boolean isEncontrado() {
+        return encontrado;
+    }
+
+    /**
+     * @return the btnEntrar
+     */
+    public javax.swing.JButton getBtnEntrar() {
+        return btnEntrar;
+    }
+
+    /**
+     * @param btnEntrar the btnEntrar to set
+     */
+    public void setBtnEntrar(javax.swing.JButton btnEntrar) {
+        this.btnEntrar = btnEntrar;
+    }
+
+    /**
+     * @return the btnSalir
+     */
+    public javax.swing.JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    /**
+     * @param btnSalir the btnSalir to set
+     */
+    public void setBtnSalir(javax.swing.JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    /**
+     * @return the jPanel1
+     */
+    public javax.swing.JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    /**
+     * @param jPanel1 the jPanel1 to set
+     */
+    public void setjPanel1(javax.swing.JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    /**
+     * @return the jPanel2
+     */
+    public javax.swing.JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    /**
+     * @param jPanel2 the jPanel2 to set
+     */
+    public void setjPanel2(javax.swing.JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    /**
+     * @return the lblCalificaciones
+     */
+    public javax.swing.JLabel getLblCalificaciones() {
+        return lblCalificaciones;
+    }
+
+    /**
+     * @param lblCalificaciones the lblCalificaciones to set
+     */
+    public void setLblCalificaciones(javax.swing.JLabel lblCalificaciones) {
+        this.lblCalificaciones = lblCalificaciones;
+    }
+
+    /**
+     * @return the lblDe
+     */
+    public javax.swing.JLabel getLblDe() {
+        return lblDe;
+    }
+
+    /**
+     * @param lblDe the lblDe to set
+     */
+    public void setLblDe(javax.swing.JLabel lblDe) {
+        this.lblDe = lblDe;
+    }
+
+    /**
+     * @return the lblInicioSes
+     */
+    public javax.swing.JLabel getLblInicioSes() {
+        return lblInicioSes;
+    }
+
+    /**
+     * @param lblInicioSes the lblInicioSes to set
+     */
+    public void setLblInicioSes(javax.swing.JLabel lblInicioSes) {
+        this.lblInicioSes = lblInicioSes;
+    }
+
+    /**
+     * @return the lblPwd
+     */
+    public javax.swing.JLabel getLblPwd() {
+        return lblPwd;
+    }
+
+    /**
+     * @param lblPwd the lblPwd to set
+     */
+    public void setLblPwd(javax.swing.JLabel lblPwd) {
+        this.lblPwd = lblPwd;
+    }
+
+    /**
+     * @return the lblSistemas
+     */
+    public javax.swing.JLabel getLblSistemas() {
+        return lblSistemas;
+    }
+
+    /**
+     * @param lblSistemas the lblSistemas to set
+     */
+    public void setLblSistemas(javax.swing.JLabel lblSistemas) {
+        this.lblSistemas = lblSistemas;
+    }
+
+    /**
+     * @return the lblUniIcon
+     */
+    public javax.swing.JLabel getLblUniIcon() {
+        return lblUniIcon;
+    }
+
+    /**
+     * @param lblUniIcon the lblUniIcon to set
+     */
+    public void setLblUniIcon(javax.swing.JLabel lblUniIcon) {
+        this.lblUniIcon = lblUniIcon;
+    }
+
+    /**
+     * @return the lblUser
+     */
+    public javax.swing.JLabel getLblUser() {
+        return lblUser;
+    }
+
+    /**
+     * @param lblUser the lblUser to set
+     */
+    public void setLblUser(javax.swing.JLabel lblUser) {
+        this.lblUser = lblUser;
+    }
+
+    /**
+     * @return the txtPwd
+     */
+    public javax.swing.JPasswordField getTxtPwd() {
+        return txtPwd;
+    }
+
+    /**
+     * @param txtPwd the txtPwd to set
+     */
+    public void setTxtPwd(javax.swing.JPasswordField txtPwd) {
+        this.txtPwd = txtPwd;
+    }
+
+    /**
+     * @return the txtUser
+     */
+    public javax.swing.JTextField getTxtUser() {
+        return txtUser;
+    }
+
+    /**
+     * @param txtUser the txtUser to set
+     */
+    public void setTxtUser(javax.swing.JTextField txtUser) {
+        this.txtUser = txtUser;
+    }
 }
