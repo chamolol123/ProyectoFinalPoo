@@ -4,7 +4,6 @@
  */
 package Vista;
 
-import Modelo.ControllerLogin;
 import Modelo.Seguridad;
 import java.io.BufferedReader;
 import java.io.File;
@@ -218,10 +217,7 @@ public class JFrameLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-         
-        ControllerLogin validar = new ControllerLogin();
-        
-        
+ 
         try {
             int nlineas=0, i=0;
             String [] usuarios;
